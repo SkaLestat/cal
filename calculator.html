@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script>
         function square(){
             var num = document.getElementById("n1");
             num.value = num.value * num.value;
         }
+        function inverse(){
+            var num = document.getElementById("n1");
+            num.value = 1/num.value;
+        }
     </script>
 </head>
 <body>
-    number:
-    <input type="text" name="" id="n1">
+    Number:
+    <input type="text" name="" id="n1" onclick="empty();">
     <button onclick="square();">x<sup>2</sup></button>    
+    <button onclick="inverse();"> 1/x </button>
 </body>
 </html>
